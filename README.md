@@ -4,3 +4,9 @@ git checkout -b <branch_name>  - создание новой ветки (из т
 git checkout <branch_name> - переходы между ветками
 git push -u origin <branch_name> - создание или установка удаленной ветки на сервере
 git add <file_path> - добавление файла к отслеживанию 
+git add -A добавление всех файлов к отслеживанию
+git commit - сохранение изменений
+git commit -m 'message'
+git push - загрузка изменений на удаленный репозиторий
+git reset <file_path> - удаление файлов из отслеживания
+git reset  - удаление всех файлов из отслеживания
