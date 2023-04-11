@@ -1,11 +1,11 @@
 class Store:
-    _instances = {}
+    _instances = None
     STORE = {}
 
-    def __call__(cls, *args, **kwargs):
-        if cls not in cls._instances:
-            cls._instances[cls] = super(Store, cls).__call__(*args, **kwargs)
-        return cls._instances[cls]
+    def __new__(cls, *args, **kwargs):
+        if cls._instances is None:
+            cls._instances = super(Store, cls).__new__(cls)
+        return cls._instances
 
     def set_item(self, key, value):
         self.STORE[key] = value
