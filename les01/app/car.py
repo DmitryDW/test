@@ -17,7 +17,7 @@ class Car:
     def wipers(self, switch):
         if not switch:
             self._wipers = 0
-        elif self._wipers <= 3:
+        elif self._wipers < 3:
             self._wipers += 1
 
         return self._wipers
