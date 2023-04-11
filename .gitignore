@@ -1,1 +1,7 @@
 .idea
+venv
+les01/tests/.pytest_cache
+.pytest_cache
+__pycache__/
+les01/__pycache__/
+les01/tests/utils/__pycache__/
