@@ -1,7 +1,7 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-class PageElement(object):
+class PageElement:
     def __init__(self, browser, timeout=10):
         self.browser = browser
         self.timeout = timeout
