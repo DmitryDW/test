@@ -22,7 +22,7 @@ class ConcreteStrategyB(Strategy):
         return "ConcreteStrategyB"
 
 context = Context(ConcreteStrategyA())
-print(context.do_some_work())  # Output: ConcreteStrategyA
+print(context.do_some_work())
 
 context.set_strategy(ConcreteStrategyB())
-print(context.do_some_work())  # Output: ConcreteStrategyB
+print(context.do_some_work())
