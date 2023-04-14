@@ -26,12 +26,11 @@ class CatFactory(AnimalFactory):
     def create_animal(self):
         return Cat()
 
-# Использование фабрики
 
 dog_factory = DogFactory()
 dog = dog_factory.create_animal()
-print(dog.speak()) # Выведет "Woof!"
+print(dog.speak())
 
 cat_factory = CatFactory()
 cat = cat_factory.create_animal()
-print(cat.speak()) # Выведет "Meow!"
+print(cat.speak())
