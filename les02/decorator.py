@@ -25,6 +25,6 @@ component = ConcreteComponent()
 decorator_a = ConcreteDecoratorA(component)
 decorator_b = ConcreteDecoratorB(decorator_a)
 
-print(component.operation())  # Output: ConcreteComponent
-print(decorator_a.operation())  # Output: ConcreteDecoratorA(ConcreteComponent)
-print(decorator_b.operation())  # Output: ConcreteDecoratorB(ConcreteDecoratorA(ConcreteComponent))
+print(component.operation())
+print(decorator_a.operation())
+print(decorator_b.operation())
