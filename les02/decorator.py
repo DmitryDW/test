@@ -2,7 +2,7 @@ class Component:
     def operation(self):
         pass
 
-class ConcreteComponent(Component):
+class ConcreteComponent(Component): # cc = Con()
     def operation(self):
         return "ConcreteComponent"
 
