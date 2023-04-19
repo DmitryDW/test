@@ -1,15 +1,15 @@
 import pytest
 from les01.app.car import Car
+import les01.tests.utils as util
+
 
 @pytest.mark.car
-def test_car():
-    car = Car('skoda')
+def test_car(car):
     assert car.name == 'skoda'
 
 
 @pytest.mark.car
-def test_car_light():
-    car = Car('skoda')
+def test_car_light(car):
     status = car.light()
     assert status == True
 
@@ -18,8 +18,7 @@ def test_car_light():
 
 
 @pytest.mark.car
-def test_car_engine():
-    car = Car('skoda')
+def test_car_engine(car):
     status = car.engine()
     assert status == True
 
@@ -28,8 +27,7 @@ def test_car_engine():
 
 
 @pytest.mark.car
-def test_car_wipers():
-    car = Car('skoda')
+def test_car_wipers(car):
     assert car._wipers == 0
 
     car.wipers(1)

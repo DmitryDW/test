@@ -7,7 +7,7 @@ store = Store()
 
 @given(parsers.parse('create garage as "{name}"'))
 def step_create_garage(name):
-    garage = Garage()
+    garage = Garage(complect='comfort', power_type='1.6')
     store.set_item(name, garage)
     print(f'Step create garage PASS, new garage with name "{name}" saved in Store')
 

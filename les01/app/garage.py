@@ -1,27 +1,33 @@
 class Garage:
+    color = 'red'
+    size = 1145
 
-    def __init__(self):
-        self._places = []
+    place = []
 
-    def put_car(self, car):
-        self._places.append(car)
+    def __init__(self, complect, power_type):
+        self.complect = complect
+        self.power_type = power_type
 
-    def put_cars(self, cars):
-        for car in cars:
-            self.put_car(car)
+    @classmethod
+    def set_place(cls, auto):
+        cls.place.append(auto)
 
-    def move_car(self, car):
-        self._places.remove(car)
+    @classmethod
+    def set_places(cls, autos):
+        for obj in autos:
+            cls.place.append(obj)
 
-    def move_cars(self, cars):
-        for car in cars:
-            self.move_car(car)
 
-    def search_car(self, attr, request):
-        results = []
-        for car in self._places:
-            value = getattr(car, attr, False)
-            if value == request:
-                results.append(car)
+autos = Garage('complect', 'power_type')
+autos.set_places(['skoda', 'uaz', 'kia', 'lada'])
 
-        return results if results else None
+skoda = Garage('comfort', 'tdi_1.3')
+lada = Garage('comfort', 'tfs_1.4')
+uaz = Garage('standart', 'tdi_2.5')
+kia = Garage('standart', 'tfs_1.6')
+toyota = Garage('premium', 'tdi_2.0')
+
+table = Garage.set_place(Garage)
+
+print(autos)
+print(table)
